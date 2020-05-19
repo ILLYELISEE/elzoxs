@@ -50,9 +50,9 @@ print_r($un->message);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap.css">
-    <script src="bootstrap.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap.css">
+    <script src="assets/bootstrap.js"></script>
     <title>Consulter son credit sur sa puce Orange</title>
 </head>
 <body>

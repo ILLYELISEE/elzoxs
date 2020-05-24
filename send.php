@@ -46,7 +46,7 @@ ini_set('display_errors', 0);
                   }
                else
                   {
-                     echo "<b style=\"color:red\">Echec de l'operation</b>";
+                     echo "<b style=\"color:red\">Echec de l'operation du à </b>".$donn;
                   }
 
       }

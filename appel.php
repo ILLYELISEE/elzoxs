@@ -1,13 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SERVICE</title>
+</head>
+<body>
+	<form action="" name="form" method="POST">
+
+  <table>
+    <tr>
+      <td>
+      <input type="submit" value="call" name="appel" >		
+      </td>
+    </tr>
+    <tr>
+      <td>
+    	<input type="submit" value="getSms" name="appel" >		
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <input type="submit" value="charging" name="appel" >		
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <input type="submit" value="purchasePass" name="appel" >		
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <input type="submit" value="subscriptionPass" name="appel" >	
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <input type="text" name="numero" id="">
+      </td>
+    </tr>
+    
+  </table>
+	
+		
+		
+	
+	
+	</form>
+</body>
+</html>
+
 <?php
-error_reporting(0);
-$name=$_POST["submit"];
-		$curl = curl_init();
+
+$numero=isset($_POST["numero"])? $_POST["numero"]: "08490157";
+$options=isset($_POST["appel"])? $_POST["appel"]: "call";
+
+$curl = curl_init();
 
 $info=[
   "params"=>"usageLayerManagement",
+  //  "type"=>"call",
+  "type"=>$options,
   "mobile"=>$numero,
-  //"mobile"=>"07070736",
-  "type"=>$name,
   // "dateGte"=>"call",
   //"dateLte"=>"call", 
   "limit"=>999,
@@ -34,12 +91,9 @@ curl_setopt_array($curl, array(
 
 
 
-
-if(isset($_POST["appel"]))
-	{
-
-
 $response = curl_exec($curl);
+
+
 $data = json_decode($response);
 
 $fo= json_decode($data->data);
@@ -59,30 +113,8 @@ foreach ($fo as $key) {
 }
 curl_close($curl);
 
-	}
-
 
 
 
 
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>SERVICE</title>
-</head>
-<body>
-	<form action="" method="POST">
-		<input type="submit" value="call" name="appel" >		
-		<input type="submit" value="getSms" name="appel" >		
-		<input type="submit" value="charging" name="appel" >		
-		<input type="submit" value="purchasePass" name="appel" >		
-		<input type="submit" value="subscriptionPass" name="appel" >		
-		<input type="text" name="numero" id="">
-		<button type="submit"></button>
-	</form>
-</body>
-</html>

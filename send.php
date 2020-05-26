@@ -47,7 +47,7 @@ error_reporting(0);
                else
                   {
                      echo "<pre>";
-                     echo "<b style=\"color:red\">Echec de l'operation  du à </b>".$obj->data->description ;
+                     echo "<b style=\"color:red\">Echec de l'operation  du à </b>".$donn->description ;
                      //echo "<b style=\"color:red\">Echec de l'operation  du à </b>".$obj->data->description;
                      echo "</pre>";
                   }

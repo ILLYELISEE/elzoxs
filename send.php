@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(0);
-ini_set('display_errors', 0);
+//ini_set('display_errors', 0);
 
   if(isset($_POST["submit"])){
      $benef=htmlentities(trim($_POST["benef"]));
@@ -46,7 +46,7 @@ ini_set('display_errors', 0);
                   }
                else
                   {
-                     echo "<b style=\"color:red\">Echec de l'operation du à </b>".$donn;
+                     echo "<b style=\"color:red\">Echec de l'operation  du à </b>".$obj->data;
                   }
 
       }
@@ -61,7 +61,7 @@ ini_set('display_errors', 0);
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel="stylesheet" href="/assets/bootstrap.min.css">
    <script src="assets/bootstrap.min.css"></script>
-   <title>ENVOI</title>
+   <title>ENVOI PUBLIC</title>
 </head>
 
 <style>

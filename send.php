@@ -14,7 +14,7 @@ error_reporting(0);
          'productId'  => $code,
          'operation'  => 'add',
          'userConcerned'  => $benef,
-         'userInitiator'  => '07070736'         
+         'userInitiator'  => '07070850'         
         ];
         
 

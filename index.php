@@ -81,7 +81,7 @@ foreach($un as $key){
       }}
 }?>
 
-<tr><td><input type="phone" autofocus="" class ="formm-control" pattern="[0-9]{8}" max="8" name="numero" id="" required></td></tr>
+<tr><td><input type="phone" autofocus="" class ="formm-control" pattern="[0-9]{8}" maxlength="8" name="numero" id="" required></td></tr>
 </table><button class="btn btn-success text-right" type="submit">Valider</button></form>
 
 </div>

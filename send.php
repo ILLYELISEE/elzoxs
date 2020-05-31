@@ -42,12 +42,12 @@ error_reporting(0);
             $donn=json_decode( $obj->data);
                if($donn->state=="completed")
                   {
-                     echo (" <i style=\"color:green\"> Donnée <b>".$code." X ".$exec."</b> envoyé avec succès au <b> ".$benef." fois</b></br></i>");
+                     echo (" <i style=\"color:green\"> Donnée <b>".$code." X ".$exec."</b> envoyé avec succès au <b> ".$benef."</b></br></i>");
                   }
                else
                   {
                      echo "<pre>";
-                     echo "<b style=\"color:red\">Echec de l'operation  du à </b>".$donn->description ;
+                     echo "<p class=\"text-left text-danger\">Echec de l'operation  du à </br>".$donn->description."</p>" ;
                      //echo "<b style=\"color:red\">Echec de l'operation  du à </b>".$obj->data->description;
                      echo "</pre>";
                   }

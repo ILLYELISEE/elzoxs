@@ -55,8 +55,14 @@
 
 <?php
 
-$numero=isset($_POST["numero"])? $_POST["numero"]: "08490157";
-$options=isset($_POST["appel"])? $_POST["appel"]: "call";
+
+error_reporting(1);
+
+$numero=$_POST["numero"];
+
+$options=$_POST["appel"];
+if(isset($numero)&&isset($options)){
+
 
 $curl = curl_init();
 
@@ -114,7 +120,7 @@ foreach ($fo as $key) {
 curl_close($curl);
 
 
-
+}
 
 
 ?>

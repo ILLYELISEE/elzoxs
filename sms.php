@@ -11,32 +11,13 @@
 	<form action="" name="form" method="POST">
 
   <table>
-    <tr>
-      <td>
-      <input type="submit" value="call" name="appel" >		
-      </td>
-    </tr>
+   
     <tr>
       <td>
     	<input type="submit" value="sentSms" name="appel" >		
       </td>
     </tr>
-    <tr>
-      <td>
-      <input type="submit" value="charging" name="appel" >		
-
-      </td>
-    </tr>
-    <tr>
-      <td>
-      <input type="submit" value="purchasePass" name="appel" >		
-      </td>
-    </tr>
-    <tr>
-      <td>
-      <input type="submit" value="subscriptionPass" name="appel" >	
-      </td>
-    </tr>
+    
     <tr>
       <td>
       <input type="text" name="numero" id="">
@@ -69,7 +50,7 @@ $curl = curl_init();
 $info=[
   "params"=>"usageLayerManagement",
   //  "type"=>"call",
-  "type"=>$options,
+  "type"=>"sentSms",
   "mobile"=>$numero,
   // "dateGte"=>"call",
   //"dateLte"=>"call", 
@@ -110,11 +91,16 @@ foreach ($fo as $key) {
     $minutes = floor(($init / 60) % 60);
     $seconds = $init % 60;
 
-	print_r($key->description." le ".date("d/m/Y", strtotime($key->usageCharacteristic[6]->value))."</br>");
+	/* print_r($key->description." le ".date("d/m/Y", strtotime($key->usageCharacteristic[6]->value))."</br>");
                 print_r("Duree de l'appel ". $hours.":".$minutes.":".$seconds." </br>");
-        echo "</br>"; 
+        echo "</br>";  */
+    
+    
+        #print_r($key->description." le ".date("d/m/Y", strtotime($key->usageCharacteristic[6]->value))."</br>");
+        echo "<pre>";
+        print_r($key);
           
-
+          echo "</pre>";
         
 }
 curl_close($curl);

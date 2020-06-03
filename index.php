@@ -60,8 +60,7 @@ print_r($un->message);
    <form  action="" method="POST" class="mt-2 ml-3">
  <table class=" form-group">
  <tr><td>Numero : <?= $num?></td></tr>
-<?php
-?>
+
 <?php
 foreach($un as $key){
       print_r( "Consommation du mois ".$key->bucket[0]->bucketCounter[0]->valueLabel);
@@ -77,9 +76,7 @@ foreach($un as $key){
   
     </tr>
 <?php
-
-      }}
-}?>
+ }}}?>
 
 <tr><td><input type="phone" autofocus="" class ="formm-control" pattern="[0-9]{8}" maxlength="8" name="numero" id="" required></td></tr>
 </table><button class="btn btn-success text-right" type="submit">Valider</button></form>
